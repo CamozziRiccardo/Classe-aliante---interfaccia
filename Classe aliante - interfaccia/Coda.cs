@@ -20,8 +20,6 @@ public class Coda : Componente
 
     public double Costo()
     {
-        // Calcolo del costo della coda basato sulla lunghezza
-        // Questo è un valore fittizio, sostituiscilo con un calcolo reale
         return lunghezza * 50;
     }
 }

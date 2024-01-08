@@ -22,8 +22,6 @@ public class Fusoliera : Componente
 
     public double Costo()
     {
-        // Calcolo del costo della fusoliera basato sulla lunghezza
-        // Questo è un valore fittizio, sostituiscilo con un calcolo reale
         return lunghezza * 100;
     }
 }
