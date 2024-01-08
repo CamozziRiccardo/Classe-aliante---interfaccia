@@ -16,8 +16,6 @@
 
     public double Costo()
     {
-        // Calcolo del costo del cerchione basato sul diametro
-        // Questo è un valore fittizio, sostituiscilo con un calcolo reale
         return diametro * 20;
     }
 }
@@ -42,8 +40,6 @@ public class Gomma : Componente
 
     public double Costo()
     {
-        // Calcolo del costo della gomma basato su altezza, larghezza e raggio
-        // Questo è un valore fittizio, sostituiscilo con un calcolo reale
         return altezza * larghezza * raggio * 10;
     }
 }
@@ -66,7 +62,6 @@ public class Ruota : Componente
 
     public double Costo()
     {
-        // Calcolo del costo della ruota basato sul costo del cerchione e della gomma
         double costoCerchione = cerchione.Costo();
         double costoGomma = gomma.Costo();
 
