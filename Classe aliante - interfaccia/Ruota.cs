@@ -62,11 +62,11 @@ public class Ruota : Componente
 
     public string Descrizione()
     {
-        string descrizione = "Aliante:\n";
+        string descrizione = "Ruota - ";
 
         foreach (Componente componente in CompRuota)
         {
-            descrizione += componente.Descrizione() + "\n";
+            descrizione += componente.Descrizione() + "\n\t";
         }
 
         return descrizione;

@@ -17,7 +17,7 @@ public class Aliante : Componente
 
     public string Descrizione()
     {
-        string descrizione = "Aliante:\n";
+        string descrizione = "";
 
         foreach (Componente componente in componenti)
         {
