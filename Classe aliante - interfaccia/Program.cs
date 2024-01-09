@@ -33,12 +33,12 @@ class Program
 
         //Creazione dell'aliante
         Aliante aliante = new Aliante();
-        Ruota ruota = new Ruota();
         Ala ala = new Ala(lunghezzaAla);
         Fusoliera fusoliera = new Fusoliera(materialeFusoliera, lunghezzaFusoliera);
+        Coda coda = new Coda(lunghezzaCoda);
+        Ruota ruota = new Ruota();
         Gomma gomma = new Gomma(altezzaGomma, larghezzaGomma, raggioGomma);
         Cerchione cerchione = new Cerchione(diametroCerchione, materialeCerchione);
-        Coda coda = new Coda(lunghezzaCoda);
 
         //Inserimento dei dati nella lista Ruota
         ruota.Add(gomma);
@@ -47,8 +47,8 @@ class Program
         //inserimento di tutti i componenti nella lista della classe aliante
         aliante.Add(ala);
         aliante.Add(fusoliera);
-        aliante.Add(ruota);
         aliante.Add(coda);
+        aliante.Add(ruota);
 
         // Visualizzazione della descrizione dell'aliante
         Console.WriteLine("\nDescrizione dell'aliante:");

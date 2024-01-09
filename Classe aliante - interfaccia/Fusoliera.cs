@@ -17,7 +17,7 @@ public class Fusoliera : Componente
 
     public string Descrizione()
     {
-        return $"Fusoliera - Materiale: {materiale}, Lunghezza: {lunghezza}";
+        return $"Fusoliera - Materiale: {materiale}, Lunghezza: {lunghezza}\n";
     }
 
     public double Costo()

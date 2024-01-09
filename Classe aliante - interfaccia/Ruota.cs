@@ -71,6 +71,7 @@ public class Ruota : Componente
 
         return descrizione;
     }
+
     public void Add(Componente componente)
     {
         CompRuota.Add(componente);

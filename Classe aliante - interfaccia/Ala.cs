@@ -17,7 +17,7 @@ public class Ala : Componente
 
     public string Descrizione()
     {
-        return $"Ala - Lunghezza: {lunghezza}, Apertura: {apertura}";
+        return $"Ala - Lunghezza: {lunghezza}, Apertura: {apertura}\n";
     }
 
     public double Costo()

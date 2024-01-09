@@ -21,7 +21,7 @@ public class Aliante : Componente
 
         foreach (Componente componente in componenti)
         {
-            descrizione += componente.Descrizione() + "\n";
+            descrizione += componente.Descrizione();
         }
 
         return descrizione;

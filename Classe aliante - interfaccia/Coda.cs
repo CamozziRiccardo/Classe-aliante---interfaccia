@@ -15,7 +15,7 @@ public class Coda : Componente
 
     public string Descrizione()
     {
-        return $"Coda - Lunghezza: {lunghezza}";
+        return $"Coda - Lunghezza: {lunghezza}\n";
     }
 
     public double Costo()
