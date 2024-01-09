@@ -9,10 +9,10 @@ public class Ala : Componente
     private double lunghezza;
     private double apertura;
 
-    public Ala(double lunghezza, double apertura)
+    public Ala(double lunghezza)
     {
         this.lunghezza = lunghezza;
-        this.apertura = apertura;
+        this.apertura = lunghezza * 2;
     }
 
     public string Descrizione()

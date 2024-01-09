@@ -5,57 +5,50 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Creazione dell'aliante
-        Aliante aliante = new Aliante();
-
         // Inserimento dei dati dell'ala dall'utente
         Console.WriteLine("Inserisci la lunghezza dell'ala:");
         double lunghezzaAla = Convert.ToDouble(Console.ReadLine());
 
-        Console.WriteLine("Inserisci l'apertura dell'ala:");
-        double aperturaAla = Convert.ToDouble(Console.ReadLine());
-
-        Ala ala = new Ala(lunghezzaAla, aperturaAla);
-        aliante.Add(ala);
-
         // Inserimento dei dati della fusoliera dall'utente
         Console.WriteLine("Inserisci il materiale della fusoliera:");
         string materialeFusoliera = Console.ReadLine();
-
         Console.WriteLine("Inserisci la lunghezza della fusoliera:");
         double lunghezzaFusoliera = Convert.ToDouble(Console.ReadLine());
-
-        Fusoliera fusoliera = new Fusoliera(materialeFusoliera, lunghezzaFusoliera);
-        aliante.Add(fusoliera);
 
         // Inserimento dei dati della coda dall'utente
         Console.WriteLine("Inserisci la lunghezza della coda:");
         double lunghezzaCoda = Convert.ToDouble(Console.ReadLine());
 
-        Coda coda = new Coda(lunghezzaCoda);
-        aliante.Add(coda);
-
         // Inserimento dei dati della ruota dall'utente
         Console.WriteLine("Inserisci il diametro del cerchione della ruota:");
         double diametroCerchione = Convert.ToDouble(Console.ReadLine());
-
         Console.WriteLine("Inserisci il materiale del cerchione:");
         string materialeCerchione = Console.ReadLine();
-
         Console.WriteLine("Inserisci l'altezza della gomma:");
         double altezzaGomma = Convert.ToDouble(Console.ReadLine());
-
         Console.WriteLine("Inserisci la larghezza della gomma:");
         double larghezzaGomma = Convert.ToDouble(Console.ReadLine());
-
         Console.WriteLine("Inserisci il raggio della gomma:");
         double raggioGomma = Convert.ToDouble(Console.ReadLine());
 
-        Cerchione cerchione = new Cerchione(diametroCerchione, materialeCerchione);
+        //Creazione dell'aliante
+        Aliante aliante = new Aliante();
+        Ruota ruota = new Ruota();
+        Ala ala = new Ala(lunghezzaAla);
+        Fusoliera fusoliera = new Fusoliera(materialeFusoliera, lunghezzaFusoliera);
         Gomma gomma = new Gomma(altezzaGomma, larghezzaGomma, raggioGomma);
+        Cerchione cerchione = new Cerchione(diametroCerchione, materialeCerchione);
+        Coda coda = new Coda(lunghezzaCoda);
 
-        Ruota ruota = new Ruota(cerchione, gomma);
+        //Inserimento dei dati nella lista Ruota
+        ruota.Add(gomma);
+        ruota.Add(cerchione);
+
+        //inserimento di tutti i componenti nella lista della classe aliante
+        aliante.Add(ala);
+        aliante.Add(fusoliera);
         aliante.Add(ruota);
+        aliante.Add(coda);
 
         // Visualizzazione della descrizione dell'aliante
         Console.WriteLine("\nDescrizione dell'aliante:");

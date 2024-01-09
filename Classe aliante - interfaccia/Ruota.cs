@@ -46,25 +46,43 @@ public class Gomma : Componente
 
 public class Ruota : Componente
 {
-    private Cerchione cerchione;
-    private Gomma gomma;
+    private List<Componente> CompRuota = new List<Componente>();
 
-    public Ruota(Cerchione cerchione, Gomma gomma)
+    public double Costo()
     {
-        this.cerchione = cerchione;
-        this.gomma = gomma;
+        double costoTotale = 0;
+
+        foreach (Componente componente in CompRuota)
+        {
+            costoTotale += componente.Costo();
+        }
+
+        return costoTotale;
     }
 
     public string Descrizione()
     {
-        return $"Ruota - {cerchione.Descrizione()}, {gomma.Descrizione()}";
+        string descrizione = "Aliante:\n";
+
+        foreach (Componente componente in CompRuota)
+        {
+            descrizione += componente.Descrizione() + "\n";
+        }
+
+        return descrizione;
+    }
+    public void Add(Componente componente)
+    {
+        CompRuota.Add(componente);
     }
 
-    public double Costo()
+    public void Remove(Componente componente)
     {
-        double costoCerchione = cerchione.Costo();
-        double costoGomma = gomma.Costo();
+        CompRuota.Remove(componente);
+    }
 
-        return costoCerchione + costoGomma;
+    public List<Componente> GetChild()
+    {
+        return CompRuota;
     }
 }
